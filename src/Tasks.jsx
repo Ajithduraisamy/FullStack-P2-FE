@@ -26,7 +26,7 @@ function Tasks() {
         onSubmit: async (values, actions) => {
             try {
                 const token = localStorage.getItem('token')
-                await axios.post('http://localhost:3007/tasks', values, {
+                await axios.post('https://fullstack-p2-be.onrender.com/tasks', values, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

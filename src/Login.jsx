@@ -23,7 +23,7 @@ function Login() {
         },
         onSubmit: async (values, actions) => {
             try {
-                const response = await axios.post('http://localhost:3007/login', values);
+                const response = await axios.post('https://fullstack-p2-be.onrender.com/login', values);
 
                 // Store token in localStorage after successful login
                 localStorage.setItem('token', response.data.token);

@@ -10,7 +10,7 @@ function Viewtasks() {
     const getapidata = async () => {
         try {
             const token = localStorage.getItem('token');
-            var result = await axios.get('http://localhost:3007/viewtasks', {
+            var result = await axios.get('https://fullstack-p2-be.onrender.com/viewtasks', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -32,7 +32,7 @@ function Viewtasks() {
     const deletedata = async (taskId) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:3007/tasks/${taskId}`, {
+            await axios.delete(`https://fullstack-p2-be.onrender.com/tasks/${taskId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

@@ -40,7 +40,7 @@ function Register() {
         },
         onSubmit: async (values, actions) => {
             try {
-                await axios.post('http://localhost:3007/register', values);
+                await axios.post('https://fullstack-p2-be.onrender.com/register', values);
                 navigate('/login');
                 actions.resetForm();
             } catch (error) {

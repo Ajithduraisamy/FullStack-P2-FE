@@ -11,7 +11,7 @@ function EditTasks() {
     const fetchtaskdata = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:3007/tasks/${taskId}`, {
+            const response = await axios.get(`https://fullstack-p2-be.onrender.com/tasks/${taskId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -51,7 +51,7 @@ function EditTasks() {
         onSubmit: async (values, actions) => {
             try {
                 const token = localStorage.getItem('token');
-                await axios.put(`http://localhost:3007/tasks/${taskId}`, values, {
+                await axios.put(`https://fullstack-p2-be.onrender.com/tasks/${taskId}`, values, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
