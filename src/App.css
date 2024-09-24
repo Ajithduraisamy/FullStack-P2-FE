@@ -1,0 +1,19 @@
+/* Custom CSS */
+.custom-margin {
+    margin-top: 50px;
+    /* Default margin for smaller screens */
+}
+
+@media (min-width: 768px) {
+    .custom-margin {
+        margin-top: 75px;
+        /* Margin for medium screens and above */
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-margin {
+        margin-top: 100px;
+        /* Margin for large screens and above */
+    }
+}
